@@ -1,4 +1,4 @@
-Network automation code for telnetting a swithch and opening global configuration mode in it.  
+Network automation code for telnetting a swithch or a router and opening global configuration mode in it.  
 
 
 import getpass;
