@@ -1,3 +1,6 @@
+Telnetting a switch and creating VLANs manually.
+
+
 import getpass
 import telnetlib
 
