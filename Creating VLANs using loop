@@ -1,3 +1,5 @@
+Telnetting a switch and creating loopbacks using FOR loop.
+
 import getpass
 import telnetlib
 
