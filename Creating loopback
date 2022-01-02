@@ -1,4 +1,4 @@
-Telneting a switch, going to global configuration mode, and to create loopback.
+Telneting a switch or router, going to global configuration mode, and creating a loopback.
 
 
 import getpass
