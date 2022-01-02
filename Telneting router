@@ -1,20 +1,23 @@
 Network automation code for telnetting a swithch or a router and opening global configuration mode in it.  
 
 
-import getpass;
-import telnetlib;
+import getpass
+import telnetlib
 
-HOST="192.168.10.1";
-User= input("enter username: ");
-Password= getpass.getpass();
+HOST = "192.168.10.1"
+User = input("enter username: ")
+Password = getpass.getpass()
 
-tn=telnetlib.Telnet(HOST);
-tn.read_until(b"Username: ");
-tn.write(User.encode("ascii")+ b"\n");
+tn=telnetlib.Telnet(HOST)
+
+tn.read_until(b"Username: ")
+tn.write(User.encode("ascii")+ b"\n")
 if Password:
-    tn.read_until(b"Password: ");
-    tn.write(Password.encode('ascii')+ b"\n");
+    tn.read_until(b"Password: ")
+    tn.write(Password.encode('ascii')+ b"\n")
     
-tn.write(b"enable\n");
-tn.write(b"config terminal\n");
-tn.write(b"exit\n");
+tn.write(b"enable\n")
+tn.write(b"config terminal\n")
+tn.write(b"exit\n")
+
+print (tn.read_all().decode("ascii"))
