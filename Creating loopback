@@ -9,6 +9,7 @@ User= input("enter username: ")
 Password= getpass.getpass()
 
 tn=telnetlib.Telnet(HOST)
+
 tn.read_until(b"Username: ")
 tn.write(User.encode("ascii")+ b"\n")
 if Password:
@@ -22,3 +23,5 @@ tn.write(b"ip add 1.1.1.1 255.255.255.255\n")
 tn.write(b"no shut\n")
 tn.write(b"exit\n")
 tn.write(b"wr\n")
+
+print (tn.read_all().decode("ascii"))
