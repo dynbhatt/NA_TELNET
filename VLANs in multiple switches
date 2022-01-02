@@ -1,3 +1,5 @@
+Telnetting into multiple switches at the same time using "function".
+
 def myfile():
     
     192.168.10.1    #ip of switch 1
@@ -35,3 +37,5 @@ for ip in f:
         tn.write(b"name VLAN" + str(n).encode("ascii") + b"\n")
     tn.write(b"exit\n")
     tn.write(b"wr\n")
+
+print (tn.read_all().decode("ascii"))
