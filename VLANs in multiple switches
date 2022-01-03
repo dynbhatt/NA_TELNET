@@ -1,6 +1,8 @@
 Telnetting into multiple switches at the same time using "function".
 
-def myfile():
+
+# Different file for list of IPs 
+def myfile():       
     
     192.168.10.1    #ip of switch 1
     192.168.10.2    #ip of switch 2
@@ -8,6 +10,8 @@ def myfile():
     192.168.10.4    #ip of switch 4
     192.168.10.5    #ip of switch 5
     
+    
+# Different file for code
 import getpass
 import telnetlib
 
