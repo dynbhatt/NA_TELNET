@@ -17,6 +17,7 @@ if Password:
     tn.write(Password.encode('ascii')+ b"\n")
     
 tn.write(b"enable\n")
+tn.write(b"cisco\n")    #enable password
 tn.write(b"config terminal\n")
 tn.write(b"vlan 1\n")
 tn.write(b"name vlan1\n")
