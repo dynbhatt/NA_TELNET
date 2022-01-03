@@ -25,6 +25,7 @@ tn.write(b"vlan 2\n")
 tn.write(b"name vlan2\n")
 tn.write(b"vlan 3\n")
 tn.write(b"name vlan3\n")
+tn.write(b"exit\n")
 tn.write(b"wr\n")
 
 print (tn.read_all().decode("ascii"))
